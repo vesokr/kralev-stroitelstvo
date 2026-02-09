@@ -813,6 +813,18 @@ img {
     font-size: 0.9rem;
 }
 
+/* ===== REVEAL ANIMATION ===== */
+.reveal-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-element.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ===== RESPONSIVE ===== */
 @media screen and (max-width: 1024px) {
     .services__grid {
