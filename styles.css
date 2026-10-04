@@ -351,3 +351,8 @@ p + p{margin-top:14px}
   .filter{gap:8px;margin-bottom:20px}
   .filter__btn{padding:8px 14px;font-size:.8rem}
 }
+.filter__btn span{
+  display:inline-block;margin-left:6px;padding:1px 7px;border-radius:100px;
+  background:rgba(0,0,0,.07);font-size:.74rem;font-weight:700;
+}
+.filter__btn.is-active span{background:rgba(255,255,255,.22)}
