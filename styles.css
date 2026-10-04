@@ -309,3 +309,31 @@ p + p{margin-top:14px}
   .contact-list li{grid-template-columns:1fr;gap:4px}
   .footer__grid{grid-template-columns:1fr}
 }
+
+
+/* ---------- цени на мобилно: таблица → карти ---------- */
+@media (max-width:760px){
+  .prices__table{border-collapse:separate;border-spacing:0;background:transparent;box-shadow:none;border-radius:0;overflow:visible}
+  .prices__table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .prices__table tbody,.prices__table tr,.prices__table td{display:block;width:100%}
+  .prices__table tr{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
+    padding:14px 16px;margin-bottom:12px;box-shadow:var(--shadow-sm);
+  }
+  .prices__table tbody tr:hover{background:var(--white)}
+  .prices__table tr.is-featured{border-color:rgba(201,162,39,.55);background:rgba(201,162,39,.08)}
+  .prices__table td{border:0;padding:6px 0;text-align:right;display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:.95rem}
+  .prices__table td::before{
+    content:attr(data-label);flex:none;text-align:left;
+    font-family:var(--font-body);font-size:.7rem;font-weight:600;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  }
+  .prices__table td:first-child{
+    display:block;text-align:left;font-size:1.1rem;padding-bottom:10px;margin-bottom:6px;
+    border-bottom:1px solid var(--line);
+  }
+  .prices__table td:first-child::before{display:none}
+  .prices__table td:nth-child(2){font-size:.88rem;color:var(--muted);text-align:right}
+  .prices__table td:last-child{white-space:normal;font-size:1.15rem}
+  .prices__table td:last-child::before{align-self:center}
+}
