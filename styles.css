@@ -337,3 +337,17 @@ p + p{margin-top:14px}
   .prices__table td:last-child{white-space:normal;font-size:1.15rem}
   .prices__table td:last-child::before{align-self:center}
 }
+
+/* ---------- галерия: филтри по категория ---------- */
+.filter{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}
+.filter__btn{
+  padding:9px 18px;border:1px solid var(--line);border-radius:100px;background:var(--white);
+  font-family:var(--font-body);font-size:.86rem;font-weight:600;color:var(--muted);
+  transition:var(--t);cursor:pointer;
+}
+.filter__btn:hover{border-color:var(--gold);color:var(--ink)}
+.filter__btn.is-active{background:var(--ink);border-color:var(--ink);color:#fff}
+@media (max-width:760px){
+  .filter{gap:8px;margin-bottom:20px}
+  .filter__btn{padding:8px 14px;font-size:.8rem}
+}

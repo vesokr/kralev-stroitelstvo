@@ -129,5 +129,23 @@
     });
   }
 
+
+  /* ---- галерия: филтри по категория ---- */
+  var filterBtns = document.querySelectorAll('.filter__btn');
+  var galItems = document.querySelectorAll('.gallery__item[data-cat]');
+  if (filterBtns.length && galItems.length) {
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        var f = btn.getAttribute('data-filter');
+        galItems.forEach(function (it) {
+          var show = (f === 'all' || it.getAttribute('data-cat') === f);
+          it.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  }
+
   onScroll();
 })();
