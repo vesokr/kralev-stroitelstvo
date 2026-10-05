@@ -31,6 +31,8 @@
 <meta name="geo.position" content="42.1354;24.7453">
 <meta name="ICBM" content="42.1354, 24.7453">
 <link rel="alternate" hreflang="bg-BG" href="https://kralev-stroitelstvo.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://kralev-stroitelstvo.vercel.app/?lang=en">
+<link rel="alternate" hreflang="de" href="https://kralev-stroitelstvo.vercel.app/?lang=de">
 <link rel="alternate" hreflang="x-default" href="https://kralev-stroitelstvo.vercel.app/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","@id":"https://kralev-stroitelstvo.vercel.app/#business","name":"Кралев Строй","alternateName":"Kralev Stroy","url":"https://kralev-stroitelstvo.vercel.app/","image":"https://kralev-stroitelstvo.vercel.app/images/hero.jpg","logo":"https://kralev-stroitelstvo.vercel.app/brand/mark.png","description":"Строителна компания в Пловдив: груб строеж, строителство до ключ, основни ремонти, интериор и довършителни работи, ВиК и електроинсталации.","telephone":"+359892613735","email":"kralevstroi@aol.com","priceRange":"$$","currenciesAccepted":"BGN","paymentAccepted":"В брой, банков превод","address":{"@type":"PostalAddress","addressLocality":"Пловдив","addressRegion":"Пловдив","addressCountry":"BG"},"geo":{"@type":"GeoCoordinates","latitude":42.1354,"longitude":24.7453},"areaServed":[{"@type":"City","name":"Пловдив"},{"@type":"AdministrativeArea","name":"Пловдивска област"}],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"}],"knowsLanguage":["bg","en","de"],"founder":{"@type":"Person","name":"Веселин Кралев"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Услуги","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Жилищно строителство и груб строеж"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Строителство до ключ"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Основен ремонт"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Интериор и довършителни работи"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"ВиК и електроинсталации"}}]}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://kralev-stroitelstvo.vercel.app/#website","url":"https://kralev-stroitelstvo.vercel.app/","name":"Кралев Строй","inLanguage":"bg-BG","publisher":{"@id":"https://kralev-stroitelstvo.vercel.app/#business"}}</script>
@@ -56,7 +58,12 @@
     </nav>
 
     <div class="nav__actions">
-      <a href="tel:+359892613735" class="nav__phone">0892 613 735</a>
+      <div class="lang" id="lang-switch" role="group" aria-label="Език / Language / Sprache">
+        <button type="button" class="lang__btn is-active" data-lang="bg" aria-pressed="true">BG</button>
+        <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang__btn" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+            <a href="tel:+359892613735" class="nav__phone">0892 613 735</a>
       <a href="#contact" class="btn btn--gold btn--sm">Оферта</a>
       <button class="nav__toggle" id="nav-toggle" aria-label="Меню"><span></span><span></span><span></span></button>
     </div>
@@ -432,5 +439,6 @@
 <div class="lightbox" id="lightbox"><span class="lightbox__close" id="lightbox-close">&times;</span><img src="" alt="" id="lightbox-img"></div>
 
 <script src="script.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>

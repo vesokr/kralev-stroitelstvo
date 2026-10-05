@@ -356,3 +356,20 @@ p + p{margin-top:14px}
   background:rgba(0,0,0,.07);font-size:.74rem;font-weight:700;
 }
 .filter__btn.is-active span{background:rgba(255,255,255,.22)}
+
+/* ---------- езиков превключвател ---------- */
+.lang{
+  display:inline-flex;align-items:center;gap:2px;padding:3px;margin-right:12px;
+  border:1px solid var(--line);border-radius:100px;background:var(--white);
+}
+.lang__btn{
+  border:0;background:transparent;cursor:pointer;border-radius:100px;
+  font-family:var(--font-body);font-size:.73rem;font-weight:700;letter-spacing:.05em;
+  color:var(--muted);padding:4px 10px;transition:var(--t);
+}
+.lang__btn:hover{color:var(--ink)}
+.lang__btn.is-active{background:var(--ink);color:#fff}
+@media (max-width:900px){
+  .lang{margin-right:6px;padding:2px}
+  .lang__btn{padding:3px 7px;font-size:.68rem}
+}
