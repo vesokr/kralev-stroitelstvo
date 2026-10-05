@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /brand/
+Disallow: /media/
+
+Sitemap: https://kralev-stroitelstvo.vercel.app/sitemap.xml
