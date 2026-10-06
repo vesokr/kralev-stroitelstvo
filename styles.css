@@ -416,7 +416,7 @@ html.i18n-hide body{visibility:hidden}
 /* ---------- мобилно: езиците НАД едрото лого ---------- */
 @media (max-width:760px){
   .nav{
-    flex-wrap:wrap;height:auto;padding:10px 0 12px;gap:8px 10px;align-items:center;
+    flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:12px;gap:8px 10px;align-items:center;
   }
   .lang{
     order:1;flex:1 0 100%;justify-content:flex-end;margin:0;padding:0;
