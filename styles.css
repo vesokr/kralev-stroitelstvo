@@ -394,3 +394,15 @@ html.i18n-hide body{visibility:hidden}
   .nav__actions .btn--sm{padding:7px 10px;font-size:.74rem}
   .nav{gap:8px}
 }
+
+/* много тесни екрани: менюто никога да не се смачква */
+.nav__toggle{flex:none}
+@media (max-width:400px){
+  .nav{gap:6px}
+  .brand__text{font-size:.78rem}
+  .lang__btn{padding:2px 4px;font-size:.6rem}
+  .nav__actions .btn--sm{padding:6px 9px;font-size:.72rem}
+}
+@media (max-width:340px){
+  .brand__text{display:none}
+}
