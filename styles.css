@@ -441,3 +441,15 @@ html.i18n-hide body{visibility:hidden}
   .nav__actions .btn--sm{padding:8px 11px;font-size:.78rem}
   .nav{gap:6px 8px}
 }
+
+/* мобилно: компактен втори ред + място за по-високия хедър */
+@media (max-width:760px){
+  .brand__text{font-size:1.14rem}
+  .nav__actions{gap:8px}
+  .nav__actions .btn--sm{padding:8px 11px;font-size:.76rem}
+  .hero__inner{padding-top:172px}
+}
+@media (max-width:380px){
+  .brand__text{font-size:1.02rem}
+  .nav__actions .btn--sm{padding:7px 9px;font-size:.72rem}
+}
