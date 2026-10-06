@@ -369,18 +369,33 @@
     } catch (e) {}
   }
 
+  var SUPPORT = ['bg', 'en', 'de'];
+
+  /* Откриване на езика от браузъра: проверява всички предпочитани езици */
+  function detectBrowserLang() {
+    var list = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || 'bg'];
+    for (var i = 0; i < list.length; i++) {
+      var code = String(list[i]).slice(0, 2).toLowerCase();
+      if (SUPPORT.indexOf(code) >= 0) return code;
+    }
+    return 'en'; /* всеки друг език -> английски */
+  }
+
   function init() {
     Array.prototype.forEach.call(document.querySelectorAll('.lang__btn'), function (b) {
       b.addEventListener('click', function () { apply(b.getAttribute('data-lang')); });
     });
     var lang = null;
-    try { var p = new URL(window.location.href).searchParams.get('lang'); if (p) lang = p; } catch (e) {}
-    if (!lang) { try { lang = localStorage.getItem('siteLang'); } catch (e) {} }
+    try {
+      var p = new URL(window.location.href).searchParams.get('lang');
+      if (p && SUPPORT.indexOf(p) >= 0) lang = p;
+    } catch (e) {}
     if (!lang) {
-      var nav = (navigator.language || 'bg').slice(0, 2).toLowerCase();
-      lang = (nav === 'en' || nav === 'de') ? nav : 'bg';
+      try { var st = localStorage.getItem('siteLang'); if (st && SUPPORT.indexOf(st) >= 0) lang = st; } catch (e) {}
     }
+    if (!lang) lang = detectBrowserLang();
     if (lang !== 'bg') apply(lang); else collect();
+    document.documentElement.classList.remove('i18n-hide');
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

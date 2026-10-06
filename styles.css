@@ -373,3 +373,6 @@ p + p{margin-top:14px}
   .lang{margin-right:6px;padding:2px}
   .lang__btn{padding:3px 7px;font-size:.68rem}
 }
+
+/* без примигване при автоматичен избор на език */
+html.i18n-hide body{visibility:hidden}
