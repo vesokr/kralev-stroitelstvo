@@ -428,7 +428,7 @@ html.i18n-hide body{visibility:hidden}
   }
   .lang__btn:hover{color:#fff;border-color:rgba(255,255,255,.5)}
   .lang__btn.is-active{background:var(--gold-2);border-color:var(--gold-2);color:#111319}
-  .brand{order:2;gap:9px;flex:1 1 auto;min-width:0}
+  .brand{order:2;gap:9px;flex:0 1 auto;min-width:0}
   .brand__mark{width:40px;height:40px}
   .brand__text{font-size:1.2rem;letter-spacing:.01em;white-space:nowrap}
   .nav__actions{order:3;margin-left:auto;gap:10px;flex:none}
