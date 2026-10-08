@@ -195,24 +195,65 @@
     <div class="section__head">
       <p class="eyebrow">Проекти</p>
       <h2 class="h2">Избрани обекти</h2>
-      <p class="section__sub">114 снимки от наши обекти, групирани в 10 обекта — изберете обект.</p>
+      <p class="section__sub">10 обекта · 114 снимки — изберете обект, за да видите снимките.</p>
     </div>
 
-    <div class="filter" id="filter">
-      <button class="filter__btn is-active" data-filter="all">Всички <span>114</span></button>
-      <button class="filter__btn" data-filter="o1">Обект 1 <span>28</span></button>
-      <button class="filter__btn" data-filter="o2">Обект 2 <span>26</span></button>
-      <button class="filter__btn" data-filter="o3">Обект 3 <span>22</span></button>
-      <button class="filter__btn" data-filter="o4">Обект 4 <span>13</span></button>
-      <button class="filter__btn" data-filter="o5">Обект 5 <span>9</span></button>
-      <button class="filter__btn" data-filter="o6">Обект 6 <span>5</span></button>
-      <button class="filter__btn" data-filter="o7">Обект 7 <span>5</span></button>
-      <button class="filter__btn" data-filter="o8">Обект 8 <span>3</span></button>
-      <button class="filter__btn" data-filter="o9">Обект 9 <span>2</span></button>
-      <button class="filter__btn" data-filter="o10">Обект 10 <span>1</span></button>
+    <div class="objects" id="objects">
+      <button type="button" class="object-card" data-target="o1">
+        <img src="images/cover_o1.jpg" alt="Обект 1 — кухня, спалня" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 1</strong><em>28 снимки</em></span>
+        <span class="object-card__hint">кухня, спалня</span>
+      </button>
+      <button type="button" class="object-card" data-target="o2">
+        <img src="images/cover_o2.jpg" alt="Обект 2 — баня, спалня" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 2</strong><em>26 снимки</em></span>
+        <span class="object-card__hint">баня, спалня</span>
+      </button>
+      <button type="button" class="object-card" data-target="o3">
+        <img src="images/cover_o3.jpg" alt="Обект 3 — спалня, всекидневна" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 3</strong><em>22 снимки</em></span>
+        <span class="object-card__hint">спалня, всекидневна</span>
+      </button>
+      <button type="button" class="object-card" data-target="o4">
+        <img src="images/cover_o4.jpg" alt="Обект 4 — спалня, всекидневна" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 4</strong><em>13 снимки</em></span>
+        <span class="object-card__hint">спалня, всекидневна</span>
+      </button>
+      <button type="button" class="object-card" data-target="o5">
+        <img src="images/cover_o5.jpg" alt="Обект 5 — спалня, офис" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 5</strong><em>9 снимки</em></span>
+        <span class="object-card__hint">спалня, офис</span>
+      </button>
+      <button type="button" class="object-card" data-target="o6">
+        <img src="images/cover_o6.jpg" alt="Обект 6 — кухня, спалня" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 6</strong><em>5 снимки</em></span>
+        <span class="object-card__hint">кухня, спалня</span>
+      </button>
+      <button type="button" class="object-card" data-target="o7">
+        <img src="images/cover_o7.jpg" alt="Обект 7 — коридор, кухня" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 7</strong><em>5 снимки</em></span>
+        <span class="object-card__hint">коридор, кухня</span>
+      </button>
+      <button type="button" class="object-card" data-target="o8">
+        <img src="images/cover_o8.jpg" alt="Обект 8 — спалня, всекидневна" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 8</strong><em>3 снимки</em></span>
+        <span class="object-card__hint">спалня, всекидневна</span>
+      </button>
+      <button type="button" class="object-card" data-target="o9">
+        <img src="images/cover_o9.jpg" alt="Обект 9 — кухня, стълбище" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 9</strong><em>2 снимки</em></span>
+        <span class="object-card__hint">кухня, стълбище</span>
+      </button>
+      <button type="button" class="object-card" data-target="o10">
+        <img src="images/cover_o10.jpg" alt="Обект 10 — стълбище" loading="lazy" decoding="async">
+        <span class="object-card__body"><strong>Обект 10</strong><em>1 снимки</em></span>
+        <span class="object-card__hint">стълбище</span>
+      </button>
     </div>
 
-    <div class="gallery">
+    <button type="button" class="gallery__back" id="gallery-back" hidden>← Всички обекти</button>
+
+    <div class="gallery" id="gallery" hidden>
       <figure class="gallery__item" data-cat="o1"><img src="images/o1_1.jpg" alt="Обект 1 — кухня, спалня — Кралев Строй" loading="lazy" decoding="async"><figcaption>Обект 1</figcaption></figure>
       <figure class="gallery__item" data-cat="o1"><img src="images/o1_2.jpg" alt="Обект 1 — кухня, спалня — Кралев Строй" loading="lazy" decoding="async"><figcaption>Обект 1</figcaption></figure>
       <figure class="gallery__item" data-cat="o1"><img src="images/o1_3.jpg" alt="Обект 1 — кухня, спалня — Кралев Строй" loading="lazy" decoding="async"><figcaption>Обект 1</figcaption></figure>
@@ -457,5 +498,6 @@
 
 <script src="script.js"></script>
 <script src="i18n.js"></script>
+<script src="gallery-objs.js"></script>
 </body>
 </html>
