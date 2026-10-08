@@ -494,3 +494,6 @@ html.i18n-hide body{visibility:hidden}
   .object-card__body em{font-size:.7rem}
   .object-card__hint{top:8px;left:8px;padding:3px 8px;font-size:.64rem}
 }
+
+/* ---------- hidden да работи наистина (CSS display го презаписваше) ---------- */
+[hidden]{display:none !important}
