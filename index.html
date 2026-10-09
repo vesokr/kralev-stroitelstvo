@@ -492,7 +492,16 @@
   </div>
 </footer>
 
-<div class="lightbox" id="lightbox"><span class="lightbox__close" id="lightbox-close">&times;</span><img src="" alt="" id="lightbox-img"></div>
+<div class="lightbox" id="lightbox">
+  <span class="lightbox__count" id="lightbox-count"></span>
+  <span class="lightbox__close" id="lightbox-close" aria-label="Затвори">&times;</span>
+  <img src="" alt="" id="lightbox-img">
+  <div class="lightbox__bar">
+    <button type="button" class="lightbox__btn" id="lightbox-prev">← Предишна</button>
+    <button type="button" class="lightbox__btn lightbox__btn--close" id="lightbox-close2">Затвори ✕</button>
+    <button type="button" class="lightbox__btn" id="lightbox-next">Следваща →</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 <script src="i18n.js"></script>

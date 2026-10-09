@@ -15,9 +15,24 @@
       history.replaceState(null, '', u.toString());
     } catch (e) {}
   }
+
+  /* компактна връзка „← Обекти" в изгледа на обект */
+  var chip = null;
+  if (gal.parentNode) {
+    chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'gallery__back';
+    chip.id = 'gallery-back';
+    chip.textContent = '← Обекти';
+    chip.hidden = true;
+    chip.addEventListener('click', function () { showObjects(true); });
+    gal.parentNode.insertBefore(chip, gal);
+  }
+
   function showObjects(scroll) {
     objs.hidden = false;
     gal.hidden = true;
+    if (chip) chip.hidden = true;
     clearParam();
     if (scroll) {
       var y = objs.getBoundingClientRect().top + window.scrollY - 90;
@@ -27,6 +42,7 @@
   function showObject(id) {
     objs.hidden = true;
     gal.hidden = false;
+    if (chip) chip.hidden = false;
     items.forEach(function (it) { it.style.display = (it.getAttribute('data-cat') === id) ? '' : 'none'; });
     var y = objs.getBoundingClientRect().top + window.scrollY - 90;
     window.scrollTo({ top: Math.max(y, 0), behavior: 'smooth' });
